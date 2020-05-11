@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/icon_tab_home"
+        android:title="@string/navigation_bottom_home" />
+
+    <item
+        android:id="@+id/navigation_sofa"
+        android:icon="@drawable/icon_tab_sofa"
+        android:title="@string/navigation_bottom_sofa" />
+    <item
+        android:id="@+id/navigation_add"
+        android:icon="@null"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_find"
+        android:icon="@drawable/icon_tab_find"
+        android:title="@string/navigation_bottom_find" />
+    <item
+        android:id="@+id/navigation_mine"
+        android:icon="@drawable/icon_tab_mine"
+        android:title="@string/navigation_bottom_mine" />
+</menu>
