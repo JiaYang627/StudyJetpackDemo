@@ -21,7 +21,7 @@ import kotlinx.coroutines.cancel
 abstract class BaseFragment<VB : ViewBinding> : Fragment(), CoroutineScope by MainScope() {
 
     private var mBinding: VB? = null
-    private lateinit var mNavHostController :NavController
+    protected lateinit var mNavHostController :NavController
 
     val mBindingView :VB get() = mBinding!!
     override fun onCreateView(

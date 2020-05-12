@@ -14,5 +14,11 @@ import cn.jiayang.studyjetpackdemo.utils.LogUtils
 class SofaFragment : BaseFragment<FragmentSofaBinding>() {
     override fun initFragment(view: View, savedInstanceState: Bundle?) {
         LogUtils.error("SofaFragment is init")
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        LogUtils.error("SofaFragment is onResume")
     }
 }

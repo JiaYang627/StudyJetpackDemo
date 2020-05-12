@@ -16,4 +16,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         LogUtils.error("HomeFragment is init")
     }
 
+    override fun onResume() {
+        super.onResume()
+        LogUtils.error("HomeFragment is onResume")
+    }
+
 }

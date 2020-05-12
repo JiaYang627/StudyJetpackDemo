@@ -6,15 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <cn.jiayang.studyjetpackdemo.base.ScrollViewPager
-        android:id="@+id/mViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="56dp" />
-
-
-    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/mBottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -24,32 +16,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_navigation_bottom" />
 
-    <LinearLayout
+
+    <cn.jiayang.studyjetpackdemo.base.ScrollViewPager
+        android:id="@+id/mViewPager"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/colorAccent"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/mBottomNavigation"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2" />
-
-        <ImageView
-            android:id="@+id/navigation_center_image"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:src="@drawable/icon_tab_publish" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
