@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pt_10">10pt</dimen>
+    <dimen name="pt_12">12pt</dimen>
+    <dimen name="pt_14">14pt</dimen>
+    <dimen name="pt_16">16pt</dimen>
+    <dimen name="pt_40">40pt</dimen>
+    <dimen name="pt_4">4pt</dimen>
+    <dimen name="pt_20">20pt</dimen>
+    <dimen name="pt_8">8pt</dimen>
+</resources>

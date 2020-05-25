@@ -12,8 +12,19 @@ import cn.jiayang.studyjetpackdemo.utils.LogUtils
  * 邮箱   ：JiaYang627@163.com / 272629247@qq.com
  */
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+
+
+    private val mHomeViewModel: HomeViewModel by lazy {
+        setViewModel<HomeViewModel> {
+            HomeViewModelFactory(HomeRepository())
+        }
+    }
+
     override fun initFragment(view: View, savedInstanceState: Bundle?) {
         LogUtils.error("HomeFragment is init")
+
+
+
     }
 
     override fun onResume() {

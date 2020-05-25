@@ -40,12 +40,13 @@ object RetrofitManager {
             })
 
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-
+        val sslParams: HttpsUtils.SSLParams = HttpsUtils.getSslSocketFactory(null, null, null)
         return OkHttpClient.Builder()
             .connectTimeout(5_000L, TimeUnit.MILLISECONDS)
             .readTimeout(10_000, TimeUnit.MILLISECONDS)
             .writeTimeout(30_000, TimeUnit.MILLISECONDS)
             .addInterceptor(httpLoggingInterceptor)
+            .sslSocketFactory(sslParams.sSLSocketFactory,sslParams.trustManager) // 信任所有证书
             .build()
     }
 

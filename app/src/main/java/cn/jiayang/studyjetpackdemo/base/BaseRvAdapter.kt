@@ -11,7 +11,7 @@ import cn.jiayang.studyjetpackdemo.base.OnItemLongClickListener
  * @date ：2020-04-29 10：04
  * 邮箱   ：JiaYang627@163.com / 272629247@qq.com
  */
-abstract class BaseRvAdapter<T>(var mData : MutableList<T>?):
+abstract class BaseRvAdapter<T>(private var mData : MutableList<T>?):
     RecyclerView.Adapter<BaseViewHolder>(){
 
 

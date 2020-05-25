@@ -1,5 +1,6 @@
 package cn.jiayang.kotlinstudyjetpack.base
 
+import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
+import cn.jiayang.studyjetpackdemo.utils.AdaptScreenUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
@@ -61,6 +63,10 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), CoroutineSc
 
          return ViewModelProvider(this, block()).get(T::class.java)
 
+    }
+
+    override fun getResources(): Resources {
+        return AdaptScreenUtils.adaptWidth(super.getResources(),750)
     }
 
 }

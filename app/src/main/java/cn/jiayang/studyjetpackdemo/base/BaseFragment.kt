@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
@@ -52,5 +54,11 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment(), CoroutineScope by Ma
         super.onDestroy()
         cancel()
         mBinding = null
+    }
+
+    inline fun<reified T : ViewModel> setViewModel(block :() -> ViewModelProvider.NewInstanceFactory) :T{
+
+        return ViewModelProvider(requireActivity(), block()).get(T::class.java)
+
     }
 }

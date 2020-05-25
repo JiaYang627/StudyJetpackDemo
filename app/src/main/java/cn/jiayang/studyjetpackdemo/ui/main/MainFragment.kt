@@ -41,6 +41,11 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             )
         )
     }
+    private val mMainViewModel :MainViewModel by lazy {
+        setViewModel<MainViewModel> {
+            MainViewModelFactory(MainRepository())
+        }
+    }
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun initFragment(view: View, savedInstanceState: Bundle?) {
@@ -80,7 +85,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                     }
                     R.id.navigation_find -> {
                         mClickPosition = 2
-                        mBindingView.mViewPager.setCurrentItem(2, false)
                         setCurrentItemViewPager(mClickPosition)
 
                     }
@@ -143,7 +147,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         int LABEL_VISIBILITY_UNLABELED = 2;
          */
 
-        // 此处只是设置 选中 变大模式
+        // 此处只是设置 item 大于3个 文字不显示情况
         menuView.labelVisibilityMode = LabelVisibilityMode.LABEL_VISIBILITY_LABELED
         menuView.updateMenuView()
 

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/pt_16"
+    android:paddingEnd="@dimen/pt_16">
+
+    <!-- app:icon="@{feed.topComment.ugc.hasLiked?@drawable/icon_cell_liked:@drawable/icon_cell_like}"-->
+    <!--            app:iconTint="@{feed.topComment.ugc.hasLiked?@color/color_theme:@color/color_3d3}"-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/like"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/color_3d3"
+        android:textSize="@dimen/pt_14"
+        app:backgroundTint="@color/color_white"
+        app:cornerRadius="0dp"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/pt_4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/comment"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:icon="@drawable/icon_cell_like"
+        tools:iconTint="@color/color_3d3"
+        tools:text="1000"
+        tools:textColor="@color/color_3d3" />
+
+    <!--        <com.google.android.material.button.MaterialButton-->
+    <!--            android:id="@+id/diss"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:onClick="@{()->InteractionPresenter.toggleFeedDiss(lifeCycleOwner,feed)}"-->
+    <!--            android:text="踩"-->
+    <!--            android:textColor="@{feed.ugc.hasdiss?@color/color_theme:@color/color_3d3}"-->
+    <!--            android:textSize="@dimen/sp_14"-->
+    <!--            app:backgroundTint="@color/color_white"-->
+    <!--            app:cornerRadius="0dp"-->
+    <!--            app:icon="@{feed.ugc.hasdiss?@drawable/icon_cell_dissed:@drawable/icon_cell_diss}"-->
+    <!--            app:iconGravity="textStart"-->
+    <!--            app:iconPadding="4dp"-->
+    <!--            app:iconTint="@{feed.ugc.hasdiss?@color/color_theme:@color/color_3d3}"-->
+    <!--            tools:icon="@drawable/icon_cell_diss"-->
+    <!--            tools:iconTint="@color/color_3d3"-->
+    <!--            tools:text="1000"-->
+    <!--            tools:textColor="@color/color_3d3"></com.google.android.material.button.MaterialButton>-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/comment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/color_3d3"
+        android:textSize="@dimen/pt_14"
+        app:backgroundTint="@color/color_white"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/icon_cell_comment"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/pt_4"
+        app:iconTint="@color/color_3d3"
+        app:layout_constraintLeft_toRightOf="@+id/like"
+        app:layout_constraintRight_toLeftOf="@+id/share"
+        tools:icon="@drawable/icon_cell_comment"
+        tools:iconTint="@color/color_3d3"
+        tools:text="1000"
+        tools:textColor="@color/color_3d3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/share"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/color_3d3"
+        android:textSize="@dimen/pt_14"
+        app:backgroundTint="@color/color_white"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/icon_cell_share"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/pt_4"
+        app:iconTint="@color/color_3d3"
+        app:layout_constraintLeft_toRightOf="@+id/comment"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:icon="@drawable/icon_cell_share"
+        tools:iconTint="@color/color_3d3"
+        tools:text="1000"
+        tools:textColor="@color/color_3d3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
