@@ -1,13 +1,16 @@
-package cn.jiayang.kotlinstudyjetpack.base
+package cn.jiayang.studyjetpackdemo.base
 
 import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
+import cn.jiayang.kotlinstudyjetpack.base.ActivityStackManager
+import cn.jiayang.kotlinstudyjetpack.base.createViewBindingForAct
 import cn.jiayang.studyjetpackdemo.utils.AdaptScreenUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope

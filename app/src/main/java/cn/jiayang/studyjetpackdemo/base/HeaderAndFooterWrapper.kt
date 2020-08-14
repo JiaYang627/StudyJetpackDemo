@@ -1,6 +1,5 @@
 package cn.jiayang.studyjetpackdemo.base
 
-import BaseRvAdapter
 import android.view.View
 import android.view.ViewGroup
 import androidx.collection.SparseArrayCompat

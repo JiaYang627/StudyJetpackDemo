@@ -2,7 +2,7 @@ package cn.jiayang.studyjetpackdemo
 
 import android.content.Intent
 import android.os.Bundle
-import cn.jiayang.kotlinstudyjetpack.base.BaseActivity
+import cn.jiayang.studyjetpackdemo.base.BaseActivity
 import cn.jiayang.kotlinstudyjetpack.base.delayLaunch
 import cn.jiayang.studyjetpackdemo.databinding.ActivitySplashBinding
 
